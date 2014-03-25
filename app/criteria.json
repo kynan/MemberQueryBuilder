@@ -337,7 +337,7 @@
       "equals": "Members who have joined a house in the number of days specified."
     },
     {
-      "name": "oath",
+      "name": "oathdays",
       "asterisk": null,
       "id": false,
       "explanation": "Members who have taken an oath in the past 90 days.",
@@ -377,7 +377,7 @@
       "equals": "Members who have joined a house since the date specified (YYYY-MM-DD format)."
     },
     {
-      "name": "oath",
+      "name": "oathsince",
       "asterisk": null,
       "id": false,
       "explanation": "Members who have taken an oath since 1st January 2012.",
@@ -417,7 +417,7 @@
       "equals": "Members who have joined a house between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
     },
     {
-      "name": "oath",
+      "name": "oathbetween",
       "asterisk": null,
       "id": false,
       "explanation": "Members who have taken an oath between 1st January 2012 and 31st March 2012.",
