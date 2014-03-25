@@ -6,7 +6,5 @@ angular.module('memberQueryBuilderApp')
     $http.get('criteria.json').success (data) ->
       $scope.criteria = data.criteria
     $scope.submit = () ->
-      querystring = "http://data.parliament.uk/membersdataplatform/services/mnis/members/query/"
-      querystring += ("#{k}=#{v}" for k, v of $scope.query if v != "").join('|')
-      console.log querystring
+      $scope.querystring = "http://data.parliament.uk/membersdataplatform/services/mnis/members/query/" + ("#{k}=#{v}" for k, v of $scope.query when v != "").join('|')
   ]
