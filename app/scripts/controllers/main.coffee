@@ -7,4 +7,8 @@ angular.module('memberQueryBuilderApp')
       $scope.criteria = data.criteria
     $scope.submit = () ->
       $scope.querystring = "http://data.parliament.uk/membersdataplatform/services/mnis/members/query/" + ("#{k}=#{v}" for k, v of $scope.query when v != "").join('|')
+    $scope.tooltips = () ->
+      $('label').tooltip()
+      $('input').tooltip()
+      return
   ]
