@@ -1,8 +1,7 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
+    <li class="active"><a href="#/#querystring">Query string</a></li>
+    <li><a href="#/#about">About</a></li>
   </ul>
   <form class="form-inline pull-right" role="form">
     <div class="form-group">
@@ -22,12 +21,22 @@
   </div>
   <button type="submit" class="btn btn-primary">Build Query</button>
   <button type="reset" class="btn btn-danger">Clear</button>
-  <div class="panel panel-default" ng-if="querystring">
-    <div class="panel-heading">
-      <h3 class="panel-title">Query string:</h3>
-    </div>
-    <div class="panel-body">
-      <a href="{{querystring}}" target="_blank">{{querystring}}</a>
-    </div>
-  </div>
 </form>
+
+<a id="querystring"></a>
+<div class="panel panel-default" ng-if="querystring">
+  <div class="panel-heading">
+    <h3 class="panel-title">Query string:</h3>
+  </div>
+  <div class="panel-body">
+    <a href="{{querystring}}" target="_blank">{{querystring}}</a>
+  </div>
+</div>
+
+<a id="about"></a>
+<div class="footer">
+  Built by Florian Rathgeber based on documentation of the
+  <a href="http://data.parliament.uk/membersdataplatform/memberquery.aspx" target="_blank">
+    UK Parliament - Members' Names Data Platform
+  </a>
+</div>
