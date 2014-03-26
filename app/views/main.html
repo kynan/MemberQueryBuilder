@@ -12,6 +12,17 @@
   <h3 class="text-muted">MemberQueryBuilder</h3>
 </div>
 
+<h4>A dynamic query builder for the
+<a href="http://data.parliament.uk/membersdataplatform/memberquery.aspx" target="_blank">
+  UK Parliament - Members' Names Data Platform
+</a>:</h4>
+
+<ol>
+  <li>Enter your query parameters in the form</li>
+  <li>Hit "Build Query"</li>
+  <li>Submit your <a href="#/#querystring">Query string</a></li>
+</ol>
+
 <form class="form-horizontal" role="form" ng-submit="submit()">
   <div class="form-group" ng-repeat="c in criteria | filter:formfilter" repeat-done="tooltips()">
     <label for="{{c.name}}" class="col-sm-4 control-label" data-toggle="tooltip" data-placement="right" title="{{c.equals}}">{{c.name}}</label>
