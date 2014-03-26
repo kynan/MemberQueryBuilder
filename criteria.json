@@ -1,0 +1,554 @@
+{
+  "criteria": [
+    {
+      "name": "id",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Returns A Member whose unique identifier in the system is 12345.",
+      "example": "id=12345",
+      "equals": "Members' Name system unique identifier."
+    },
+    {
+      "name": "refDods",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Returns A Member whose reference in the Dods system is 12345.",
+      "example": "refDods=12345",
+      "equals": "Lookup on a Members Dods reference number."
+    },
+    {
+      "name": "gender",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Male Members.",
+      "example": "gender=M",
+      "equals": "A Members' gender (M or F)."
+    },
+    {
+      "name": "namesw",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members whose surname starts with the letter A (Commons Members only will be returned unless a House parameter is also included in the query).",
+      "example": "namesw=A",
+      "equals": "Members' name (by default Commons Members) starts with the characters supplied."
+    },
+    {
+      "name": "titlesw",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members whose title starts with the letter A.",
+      "example": "titlesw=A",
+      "equals": "Members' title (i.e. Members of the House of Lords) starts with the characters supplied."
+    },
+    {
+      "name": "name",
+      "asterisk": "Searches for preferred names (Commons Members) containing the value specified.",
+      "id": false,
+      "explanation": "Members whose preferred name is David Smith, or in the asterisk example, contains the word Smith (e.g. Smithson - Commons Members only will be returned unless a House parameter is also included in the query).",
+      "example": "name=David Smith",
+      "equals": "A Members' full preferred name."
+    },
+    {
+      "name": "title",
+      "asterisk": "Searches for titles containing the value specified.",
+      "id": false,
+      "explanation": "Members whose title is Lord Black of London, or in the asterisk example, contains the word Black (e.g. Blackburn).",
+      "example": "title=Lord Black of London",
+      "equals": "A Members' title (how a member is addressed, used instead of name in the House of Lords)."
+    },
+    {
+      "name": "nametitle",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members with the salutatory title Mrs.",
+      "example": "nametitle=Mrs",
+      "equals": "A Members' salutatory title (Mr\/Mrs etc... Commons Members only)."
+    },
+    {
+      "name": "forename",
+      "asterisk": "Includes all forenames A Member has been known by historically.",
+      "id": false,
+      "explanation": "Members whose current forename is David, or in the asterisk example, has ever been called David.",
+      "example": "forename=David",
+      "equals": "A Members' current forename."
+    },
+    {
+      "name": "surname",
+      "asterisk": "Includes all surnames A Member has been known by historically.",
+      "id": false,
+      "explanation": "Members whose current surname is Smith, or in the asterisk example, has ever been called Smith.",
+      "example": "surname=Smith",
+      "equals": "A Members' current surname."
+    },
+    {
+      "name": "rank",
+      "asterisk": "Includes all ranks A Member has held.",
+      "id": true,
+      "explanation": "Members whose current rank is Lord, or in the asterisk example, has ever held the rank Lord.",
+      "example": "rank=Lord",
+      "equals": "A Members' current rank (e.g Lord, Viscount)."
+    },
+    {
+      "name": "honprefix",
+      "asterisk": "Includes all honourary prefixes A Member has held historically.",
+      "id": true,
+      "explanation": "Members who are currently Right Honourable, or in the asterisk example, have ever been Right Honourable.",
+      "example": "honprefix=Right Honourable",
+      "equals": "A Members' current honourary prefixes."
+    },
+    {
+      "name": "biographycategory",
+      "asterisk": null,
+      "id": true,
+      "explanation": "Members with one or more interests in the biography category Foreign Affairs.",
+      "example": "biographycategory=Foreign Affairs",
+      "equals": "Members having one or more biographical interests in the specified category."
+    },
+    {
+      "name": "biographyinterest",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members with an interest in Africa.",
+      "example": "biographyinterest=Africa",
+      "equals": "Members with the specified interest."
+    },
+    {
+      "name": "experiencetype",
+      "asterisk": null,
+      "id": true,
+      "explanation": "Members with experience in one or more areas of Non Political areas.",
+      "example": "experiencetype=Non Political Life",
+      "equals": "Members having experience one in the specified area."
+    },
+    {
+      "name": "experience",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have been a company director.",
+      "example": "experience=company director",
+      "equals": "Members with the specified experience."
+    },
+    {
+      "name": "honour",
+      "asterisk": "Members who have held the honour now or in the past.",
+      "id": true,
+      "explanation": "Members with a KBE, or current and previous holders of the honour.",
+      "example": "honour=KBE",
+      "equals": "Members holding the specified honour."
+    },
+    {
+      "name": "living",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who are now deceased.",
+      "example": "living=false",
+      "equals": "Whether a Member is alive or not."
+    },
+    {
+      "name": "interestcategory",
+      "asterisk": null,
+      "id": true,
+      "explanation": "Members with one or more interests in the interest category with the id of 1.",
+      "example": "interestcategoryid=1",
+      "equals": "Members having one or more registered interests in the specified category."
+    },
+    {
+      "name": "house",
+      "asterisk": "Includes previous House Memberships.",
+      "id": true,
+      "explanation": "Members who currently sit in the Commons, or in the asterisk example, have ever sat in the Commons.",
+      "example": "house=Commons",
+      "equals": "The House a Member currently sits in."
+    },
+    {
+      "name": "fymp",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members with a constituency in the postcode AA1 1AB",
+      "example": "fymp=AA1 1AB",
+      "equals": "Postcode lookup for a Members' constituency."
+    },
+    {
+      "name": "party",
+      "asterisk": "Includes previous party allegiances.",
+      "id": true,
+      "explanation": "Members who are currently aligned to the Conservative party, or in the asterisk example, have had allegience to the party in the past.",
+      "example": "party=Conservative",
+      "equals": "The party a Member currently has allegiance with."
+    },
+    {
+      "name": "partysubtype",
+      "asterisk": "Includes previous party sub-type allegiances.",
+      "id": true,
+      "explanation": "Members who are currently aligned to the Coop party sub type, or in the asterisk example, have had allegience to the party sub type in the past.",
+      "example": "partysubtype=Coop",
+      "equals": "The party sub-type a Member currently has allegiance to."
+    },
+    {
+      "name": "constituency",
+      "asterisk": "Includes Members who previously represented a constituency.",
+      "id": true,
+      "explanation": "Member who currently represents Eltham, or in the asterisk example, have represented Eltham in the past.",
+      "example": "constituency=Eltham",
+      "equals": "The constituency a Member represents."
+    },
+    {
+      "name": "constituencyinarea",
+      "asterisk": "Includes Members who represented the area in the past.",
+      "id": true,
+      "explanation": "Members who are currently represent an English constituency, or in the asterisk example, have done so in the past.",
+      "example": "constituencyinarea=England",
+      "equals": "Members representing constituencies in a given area."
+    },
+    {
+      "name": "returnedatelection",
+      "asterisk": null,
+      "id": true,
+      "explanation": "Members returned at the 2010 General Election.",
+      "example": "returnedatelection=2010 General Election",
+      "equals": "Members returned at the specified election."
+    },
+    {
+      "name": "lordsmembershiptype",
+      "asterisk": "Includes Members who have sat by that type of membership in the past.",
+      "id": true,
+      "explanation": "Members who currently sit as elected members of the House of Lords, or in the asterisk example, have done so in the past.",
+      "example": "lordsmembershiptype=Elected",
+      "equals": "Lords Members of the specified type (e.g. Elected)."
+    },
+    {
+      "name": "iseligible",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members eligible to sit",
+      "example": "iseligible=true",
+      "equals": "Whether a Member is currently eligible to sit in either House."
+    },
+    {
+      "name": "currentstatus",
+      "asterisk": null,
+      "id": true,
+      "explanation": "Members currently suspended for any reason.",
+      "example": "currentstatus=Suspended",
+      "equals": "Members with the specified current status."
+    },
+    {
+      "name": "standingdown",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members standing down at the next election.",
+      "example": "standingdown=true",
+      "equals": "Whether a Member is standing down at the next election."
+    },
+    {
+      "name": "holdsgovernmentpost",
+      "asterisk": "Members who have held a Government post now or in the past.",
+      "id": false,
+      "explanation": "Current Government post holders.",
+      "example": "holdsgovernmentpost=true",
+      "equals": "Members holding a Government post."
+    },
+    {
+      "name": "holdsoppositionpost",
+      "asterisk": "Members who have held an Opposition post now or in the past.",
+      "id": false,
+      "explanation": "Current Opposition post holders.",
+      "example": "holdsoppositionpost=true",
+      "equals": "Members holding an Opposition post."
+    },
+    {
+      "name": "holdsparliamentarypost",
+      "asterisk": "Members who have held a Parliamentary\/Party post now or in the past.",
+      "id": false,
+      "explanation": "Current Parliamentary\/Party post holders.",
+      "example": "holdsparliamentarypost=true",
+      "equals": "Members holding a Parliamentary\/Party post."
+    },
+    {
+      "name": "governmentpost",
+      "asterisk": "Members who have held the specified Government post now or in the past.",
+      "id": true,
+      "explanation": "Current Chancellor of the Exchequer, or in the asterisk example, the current and previous holders of the post. NB. It is advised to use the id option for this criterion so as to avoid typographical errors.",
+      "example": "governmentpost=Chancellor of the Exchequer",
+      "equals": "Members holding the specified Government post."
+    },
+    {
+      "name": "oppositionpost",
+      "asterisk": "Members who have held the specified Opposition post now or in the past.",
+      "id": true,
+      "explanation": "Current Shadow Chancellor of the Exchequer, or in the asterisk example, the current and previous holders of the post. NB. It is advised to use the id option for this criterion so as to avoid typographical errors.",
+      "example": "oppositionpost=Shadow Chancellor of the Exchequer",
+      "equals": "Members holding the specified Opposition post."
+    },
+    {
+      "name": "parliamentarypost",
+      "asterisk": "Members who have held the specified Parliamentary post now or in the past.",
+      "id": true,
+      "explanation": "Current Speaker, or in the asterisk example, the current and previous holders of the post. NB. It is advised to use the id option for this criterion so as to avoid typographical errors.",
+      "example": "parliamentarypost=Speaker",
+      "equals": "Members holding the specified Parliamentary post."
+    },
+    {
+      "name": "holdscabinetpost",
+      "asterisk": "Members who have held a cabinet post now or in the past.",
+      "id": false,
+      "explanation": "Current cabinet post holders.",
+      "example": "holdscabinetpost=true",
+      "equals": "Members holding a cabinet post."
+    },
+    {
+      "name": "holdsshadowcabinetpost",
+      "asterisk": "Members who have held a shadow cabinet post now or in the past.",
+      "id": false,
+      "explanation": "Current shadow cabinet post holders.",
+      "example": "holdsshadowcabinetpost=true",
+      "equals": "Members holding a shadow cabinet post."
+    },
+    {
+      "name": "committee",
+      "asterisk": "Members who have sat on the Committee now or in the past.",
+      "id": true,
+      "explanation": "Current members of the Administration Committee, or, current and previous members of the committee.",
+      "example": "committee=Administration",
+      "equals": "Members sitting on the specified Committee."
+    },
+    {
+      "name": "deceaseddays",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Current or former Members who have died in the past 90 days. The membership=all parameter here will include former Members who have died, otherwise only Members who held a membership at time of death will be returned.",
+      "example": "deceaseddays=90",
+      "equals": "Members who have died in the number of days specified."
+    },
+    {
+      "name": "retireddays",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have died in the past 90 days.",
+      "example": "retireddays=90",
+      "equals": "Members who have retired in the number of days specified."
+    },
+    {
+      "name": "joineddays",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have joined either house in the past 90 days.",
+      "example": "joineddays=90",
+      "equals": "Members who have joined a house in the number of days specified."
+    },
+    {
+      "name": "oathdays",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have taken an oath in the past 90 days.",
+      "example": "oathdays=90",
+      "equals": "Members who have taken an oath in the number of days specified."
+    },
+    {
+      "name": "maidenspeechdays",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have made their maiden speech in the past 90 days.",
+      "example": "maidenspeechdays=90",
+      "equals": "Members who have made their maiden speech in the number of days specified."
+    },
+    {
+      "name": "deceasedsince",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Current or former Members who have died since 1st January 2012. The membership=all parameter here will include former Members who have died, otherwise only Members who held a membership at time of death will be returned.",
+      "example": "deceasedsince=2012-01-01",
+      "equals": "Members who have died since the date specified (YYYY-MM-DD format)."
+    },
+    {
+      "name": "retiredsince",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have died since 1st January 2012.",
+      "example": "retiredsince=2012-01-01",
+      "equals": "Members who have retired since the date specified (YYYY-MM-DD format)."
+    },
+    {
+      "name": "joinedsince",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have joined either house since 1st January 2012.",
+      "example": "joinedsince=2012-01-01",
+      "equals": "Members who have joined a house since the date specified (YYYY-MM-DD format)."
+    },
+    {
+      "name": "oathsince",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have taken an oath since 1st January 2012.",
+      "example": "oathsince=2012-01-01",
+      "equals": "Members who have taken an oath since the date specified (YYYY-MM-DD format)."
+    },
+    {
+      "name": "maidenspeechsince",
+      "asterisk": "Not supported",
+      "id": false,
+      "explanation": "Members who have made their maiden speech since 1st January 2012",
+      "example": "maidenspeechsince=2012-01-01",
+      "equals": "Members who have made their maiden speech since the date specified (YYYY-MM-DD format)"
+    },
+    {
+      "name": "deceasedbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Current or former Members who have died between 1st January 2012 and 31st March 2012. The membership=all parameter here will include former Members who have died, otherwise only Members who held a membership at time of death will be returned.",
+      "example": "deceasedbetween=2012-01-01and2012-03-31",
+      "equals": "Members who have died between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "retiredbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have died between 1st January 2012 and 31st March 2012.",
+      "example": "retiredbetween=2012-01-01and2012-03-31",
+      "equals": "Members who have retired between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "joinedbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have joined either house between 1st January 2012 and 31st March 2012.",
+      "example": "joinedbetween=2012-01-01and2012-03-31",
+      "equals": "Members who have joined a house between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "oathbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have taken an oath between 1st January 2012 and 31st March 2012.",
+      "example": "oathbetween=2012-01-01and2012-03-31",
+      "equals": "Members who have taken an oath between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "maidenspeechbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who have made their maiden speech between 1st January 2012 and 31st March 2012.",
+      "example": "maidenspeechbetween=2012-01-01and2012-03-31",
+      "equals": "Members who have made their maiden speech between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "lordsmemberbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who were Lords members between 1st January 2012 and 31st March 2012.",
+      "example": "lordsmemberbetween=2012-01-01and2012-03-31",
+      "equals": "Members who held a membership in the House of Lords between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "commonsmemberbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who were Commons members between 1st January 2012 and 31st March 2012.",
+      "example": "commonsmemberbetween=2012-01-01and2012-03-31",
+      "equals": "Members who held a membership in the House of Commons between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "heldcabinetpostbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who were in the cabinet between 1st January 2012 and 31st March 2012.",
+      "example": "heldcabinetpostbetween=2012-01-01and2012-03-31",
+      "equals": "Members who held a cabinet post between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    },
+    {
+      "name": "heldshadowcabinetpostbetween",
+      "asterisk": null,
+      "id": false,
+      "explanation": "Members who were in the shadow cabinet between 1st January 2012 and 31st March 2012.",
+      "example": "heldshadowcabinetpostbetween=2012-01-01and2012-03-31",
+      "equals": "Members who held a shadow cabinet post between the dates specifed (pass in the format YYYY-MM-DDandYYYY-MM-DD)."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "FullBiog",
+      "description": "Returns all data held about a Member. This will only be permitted on queries that return five records or fewer.\n                All other output types return subsets of this data."
+    },
+    {
+      "name": "Addresses",
+      "description": "Member address information (e.g. website, twitter, consituency address etc...)"
+    },
+    {
+      "name": "BasicDetails",
+      "description": "Basic information about the Member (e.g. given name, HoL membership type, oaths etc...)."
+    },
+    {
+      "name": "BiographyEntries",
+      "description": "Member biographical information (e.g. countries of interest, policy expertise etc...)."
+    },
+    {
+      "name": "Committees",
+      "description": "Committees a Member sits or has sat on as well details on committee chairing."
+    },
+    {
+      "name": "Constituencies",
+      "description": "Constituencies a Member has represented."
+    },
+    {
+      "name": "ElectionsContested",
+      "description": "Elections a Member has contested but not won."
+    },
+    {
+      "name": "Experiences",
+      "description": "Non-parliamentary experience of a Member."
+    },
+    {
+      "name": "GovernmentPosts",
+      "description": "Government posts a Member has held."
+    },
+    {
+      "name": "Honours",
+      "description": "Honours (e.g. MBE, OBE etc...) held by a Member."
+    },
+    {
+      "name": "HouseMemberships",
+      "description": "House membership list of a Member."
+    },
+    {
+      "name": "Interests",
+      "description": "Registered interests (financial) of a Member."
+    },
+    {
+      "name": "KnownAs",
+      "description": "Details of names a Member has chosen to be known as instead of their full title (HoL members only)."
+    },
+    {
+      "name": "MaidenSpeeches",
+      "description": "Maiden speech dates for a Member."
+    },
+    {
+      "name": "OppositionPosts",
+      "description": "Opposition posts a Member has held."
+    },
+    {
+      "name": "OtherParliaments",
+      "description": "Other Parliaments that a Member has held a membership of."
+    },
+    {
+      "name": "ParliamentaryPosts",
+      "description": "Parliamentary posts a Member has held."
+    },
+    {
+      "name": "Parties",
+      "description": "Party affiliations of a Member."
+    },
+    {
+      "name": "PreferredNames",
+      "description": "Full set of data about a Members' name (e.g. surname, forename, Honorary prefixes, full details of HoL title and rank etc...)"
+    },
+    {
+      "name": "Staff",
+      "description": "Staff employed by a Member."
+    },
+    {
+      "name": "Statuses",
+      "description": "Status history (e.g. suspensions and disqualifications) for a Member."
+    }
+  ]
+}
