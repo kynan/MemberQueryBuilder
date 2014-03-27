@@ -67,3 +67,8 @@ body {
 form.form-inline {
   padding-right: 10px;
 }
+
+.ng-social-container {
+  text-align: center;
+  padding-bottom: 10px;
+}
